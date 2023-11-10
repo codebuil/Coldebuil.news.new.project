@@ -1,5 +1,4 @@
 import re
-import re
 from bs4 import BeautifulSoup
 import requests
 
@@ -14,8 +13,8 @@ ss=ss.select_one("main")
 ss=ss.select("h3")
 for n in list(ss):
     sss=n.select_one("a")
-    print(sss.string.strip())
-    #print(n.strip())
+    print(sss.string.strip()+"->http://github.com"+sss.attrs.get("href"))
+
 
 
 
